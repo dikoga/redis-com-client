@@ -19,22 +19,30 @@ Later you can use these operations:
 - Initiliaze (this operation is required in order to share the same Redis instance with N sites)
   Cache.Init "prefix1"
 
-- Add
+-**Add**
+
   Cache.Add "key1", "value"
-  or
+ 
+ **or**
+
   Cache("key1") = "value"
 
-- Add with expiration
+-**Add with expiration**
+
   Cache.SetExpiration "key1", "value", 1000 'ms
   
-- Get
+-**Get**
+
   Cache.Get "key1"
-  or
+
+**or**
+
   Cache("key1")
   
-- Remove
+-**Remove**
+
   Cache.Remove "key1"
   
-- Remove All
+-**Remove All**
+
   Cache.RemoveAll()
-  
