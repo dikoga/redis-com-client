@@ -7,9 +7,12 @@ Line command to install the COM+:
 
 %SystemRoot%\Microsoft.NET\Framework\v4.0.30319\regasm redis-com-client.dll /tlb:redis-com-client.tlb /codebase
 
-On the ASP side you have not create the object. I initialized this in the global.asa.
+On the ASP side you have not create the object. I initialized this in the global.asa using this:
+    <OBJECT RUNAT=Server SCOPE=Application ID=Cache PROGID=CacheManager></OBJECT>
 
-<OBJECT RUNAT=Server SCOPE=Application ID=Cache PROGID=CacheManager></OBJECT>
+However, it also works if you want to create a scoped object:
+    Set Cache = Server.CreateObject("CacheManager")
+
 
 Later you can use these operations:
 
